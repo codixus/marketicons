@@ -1,0 +1,20 @@
+{
+  "name": "marketicons",
+  "packageManager": "yarn@3.6.4",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev "
+  },
+  "devDependencies": {
+    "turbo": "^2.4.2"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "sharp": "^0.33.5"
+  }
+}

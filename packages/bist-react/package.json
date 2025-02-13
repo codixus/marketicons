@@ -1,0 +1,47 @@
+{
+  "name": "@marketicons/bist-react",
+  "version": "1.0.0",
+  "description": "React components for BIST stock market logos",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "@marketicons/bist": "workspace:*",
+    "@marketicons/markets": "workspace:*"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@types/react": "^17.0.0",
+    "rollup": "^2.60.0",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "typescript": "^4.5.2"
+  },
+  "keywords": [
+    "react",
+    "bist",
+    "borsa",
+    "istanbul",
+    "stock",
+    "market",
+    "icons",
+    "logos",
+    "svg"
+  ],
+  "author": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

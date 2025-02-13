@@ -1,0 +1,31 @@
+{
+  "name": "@marketicons/markets",
+  "version": "1.0.0",
+  "description": "Market codes and names",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  },
+  "keywords": [
+    "bist",
+    "borsa",
+    "istanbul",
+    "stock",
+    "market",
+    "codes"
+  ],
+  "author": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

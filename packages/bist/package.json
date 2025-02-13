@@ -1,0 +1,32 @@
+{
+  "name": "@marketicons/bist",
+  "version": "1.0.0",
+  "description": "BIST (Borsa Istanbul) company logos as SVG icons",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "svg"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "prepare": "yarn build",
+    "dev": "node build.js -w"
+  },
+  "keywords": [
+    "bist",
+    "borsa",
+    "istanbul",
+    "stock",
+    "market",
+    "icons",
+    "logos",
+    "svg"
+  ],
+  "author": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

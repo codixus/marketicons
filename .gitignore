@@ -1,0 +1,9 @@
+node_modules
+.turbo
+.next
+.env
+.env.local
+dist
+scripts
+.DS_Store
+.yarn
