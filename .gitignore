@@ -7,3 +7,5 @@ dist
 scripts
 .DS_Store
 .yarn
+.bolt
+.cursor
