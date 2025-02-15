@@ -9,12 +9,12 @@ export interface BistIconProps
   title?: string;
 }
 
-export const BistIcon: React.FC<BistIconProps> = ({
+export function BistIcon({
   name,
   size = 24,
   title,
   ...props
-}) => {
+}: BistIconProps): JSX.Element | null {
   const iconData = icons[name];
   if (!iconData) return null;
 
@@ -22,14 +22,15 @@ export const BistIcon: React.FC<BistIconProps> = ({
 
   return (
     <svg
+      xmlns="http://www.w3.org/2000/svg"
       viewBox={iconData.viewBox}
       width={size}
       height={size}
       preserveAspectRatio="xMidYMid meet"
-      {...props}
-      dangerouslySetInnerHTML={{ __html: iconData.content }}
       aria-label={iconTitle}
       role="img"
+      {...props}
+      dangerouslySetInnerHTML={{ __html: iconData.content }}
     />
   );
-};
+}

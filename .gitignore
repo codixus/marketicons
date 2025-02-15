@@ -9,3 +9,5 @@ scripts
 .yarn
 .bolt
 .cursor
+# Local Netlify folder
+.netlify
