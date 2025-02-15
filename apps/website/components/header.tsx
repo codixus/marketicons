@@ -30,16 +30,32 @@ export function Header() {
     >
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/logo.svg"
-              alt="MarketIcons Logo"
-              width={32}
-              height={32}
-              className="w-8 h-8"
-            />
-            <span className="font-bold text-xl text-primary">MarketIcons</span>
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link href="/">
+              <Image
+                src="/logo.svg"
+                alt="MarketIcons Logo"
+                width={32}
+                height={32}
+                className="w-12 h-12"
+              />
+            </Link>
+            <div className="flex flex-col items-start">
+              <Link href="/">
+                <span className="font-bold text-xl text-primary">
+                  MarketIcons
+                </span>
+              </Link>
+              <a
+                href="https://codixus.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors font-satoshi"
+              >
+                by codixus
+              </a>
+            </div>
+          </div>
 
           <nav className="hidden md:flex items-center space-x-8">
             <Link
@@ -49,10 +65,10 @@ export function Header() {
               Docs
             </Link>
             <Link
-              href="/search"
+              href="/icons"
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
-              Icon Search
+              Icons
             </Link>
             <Button variant="outline" size="sm" asChild>
               <a
@@ -91,11 +107,11 @@ export function Header() {
                 Docs
               </Link>
               <Link
-                href="/search"
+                href="/icons"
                 className="text-foreground/80 hover:text-foreground transition-colors py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Icon Search
+                Icons
               </Link>
               <Button variant="outline" size="sm" asChild>
                 <a

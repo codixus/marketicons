@@ -19,6 +19,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-montserrat)"],
+        satoshi: ["var(--font-satoshi)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

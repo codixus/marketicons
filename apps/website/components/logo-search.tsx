@@ -182,7 +182,12 @@ export function LogoSearch() {
         </motion.div>
 
         <div className="max-w-xl mx-auto mb-12 space-y-4">
-          <div className="flex gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex gap-4"
+          >
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
               <Input
@@ -212,11 +217,16 @@ export function LogoSearch() {
                 </SelectItem>
               </SelectContent>
             </Select>
-          </div>
-          <p className="text-sm text-muted-foreground text-center">
+          </motion.div>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-sm text-muted-foreground text-center"
+          >
             Showing {currentIcons.length} results from {filteredIcons.length}{" "}
             icons
-          </p>
+          </motion.p>
         </div>
 
         <motion.div
@@ -300,8 +310,8 @@ export function LogoSearch() {
                   <>
                     <BistIcon
                       name={selectedIcon}
-                      size={32}
-                      className="text-foreground"
+                      size={48}
+                      className="text-foreground rounded-md"
                     />
                     <div className="flex items-center gap-2">
                       <span>{selectedIcon}</span>

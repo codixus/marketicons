@@ -15,9 +15,19 @@ export function Footer() {
                 alt="MarketIcons Logo"
                 width={32}
                 height={32}
-                className="w-8 h-8"
+                className="w-12 h-12  "
               />
-              <h3 className="font-bold text-primary">MarketIcons</h3>
+              <div className="flex flex-col">
+                <h3 className="font-bold text-primary">MarketIcons</h3>
+                <a
+                  href="https://codixus.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors font-satoshi"
+                >
+                  by codixus
+                </a>
+              </div>
             </div>
             <p className="text-sm text-muted-foreground">
               High-quality BIST company logos for your React and React Native
@@ -38,10 +48,10 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/search"
+                  href="/icons"
                   className="hover:text-foreground transition-colors"
                 >
-                  Search Icons
+                  Icons
                 </Link>
               </li>
               <li>
@@ -102,7 +112,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
+        <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground font-satoshi">
           <a
             href="https://codixus.com"
             target="_blank"

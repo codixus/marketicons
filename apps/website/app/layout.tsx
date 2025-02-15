@@ -1,12 +1,22 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Suspense } from "react";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+});
+
+const satoshi = localFont({
+  src: "../public/fonts/Satoshi-Bold.ttf",
+  variable: "--font-satoshi",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://marketicons.dev"),
@@ -61,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn(montserrat.variable, satoshi.variable)}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
@@ -84,7 +94,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={cn(montserrat.className, "min-h-screen bg-background")}>
+      <body className={cn("min-h-screen bg-background font-sans")}>
         <Suspense>
           <Header />
           <main>{children}</main>
