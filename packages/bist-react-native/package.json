@@ -1,0 +1,61 @@
+{
+  "name": "@marketicons/bist-react-native",
+  "version": "0.1.0",
+  "description": "BIST (Borsa Istanbul) company logos as React Native components",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-native": ">=0.60.0",
+    "react-native-svg": ">=12.0.0"
+  },
+  "devDependencies": {
+    "@marketicons/bist": "workspace:*",
+    "@testing-library/react-native": "^12.0.0",
+    "@types/jest": "^29.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-native": "^0.72.0",
+    "eslint": "^8.49.0",
+    "jest": "^29.0.0",
+    "react": "^18.2.0",
+    "react-native": "^0.72.0",
+    "react-native-svg": "^13.9.0",
+    "ts-jest": "^29.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.2.2"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/react-native/cleanup-after-each"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native|@react-native|react-native-svg)/)"
+    ]
+  }
+}

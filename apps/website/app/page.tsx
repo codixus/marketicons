@@ -1,8 +1,7 @@
-import { Header } from "@/components/header";
+"use client";
 import { HeroSection } from "@/components/hero-section";
 import { Features } from "@/components/features";
 import { LogoSearch } from "@/components/logo-search";
-import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (

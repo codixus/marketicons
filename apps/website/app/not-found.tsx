@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -9,12 +8,7 @@ export default function NotFound() {
   return (
     <div className="min-h-[80vh] flex items-center justify-center">
       <div className="container px-4 mx-auto max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center space-y-8"
-        >
+        <div className="text-center space-y-8 animate-in fade-in-50 slide-in-from-bottom-8 duration-500">
           <div className="space-y-2">
             <h1 className="text-8xl font-bold text-primary">404</h1>
             <h2 className="text-2xl font-semibold">Page Not Found</h2>
@@ -43,7 +37,7 @@ export default function NotFound() {
               </a>
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

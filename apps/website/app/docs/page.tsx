@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Header } from "@/components/header";
 import { CodeBlock } from "@/components/code-block";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";

@@ -2,9 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { Suspense } from "react";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -61,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
@@ -85,16 +85,11 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={cn(montserrat.className, "min-h-screen bg-background")}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <Suspense>
           <Header />
-          <main className="">{children}</main>
+          <main>{children}</main>
           <Footer />
-        </ThemeProvider>
+        </Suspense>
       </body>
     </html>
   );
