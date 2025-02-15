@@ -1,94 +1,117 @@
-"use client"
+"use client";
 
-import { Github, Twitter } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="border-t py-12 bg-muted/50">
-      <div className="container mx-auto px-4">
+    <footer className="py-12 border-t">
+      <div className="container px-4 mx-auto max-w-7xl">
         <div className="grid gap-8 md:grid-cols-4">
-          <div>
-            <h3 className="font-bold text-lg mb-4">MarketIcons</h3>
-            <p className="text-muted-foreground">
-              Beautiful icons for Turkish stock market companies.
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <Image
+                src="/logo.svg"
+                alt="MarketIcons Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
+              <h3 className="font-bold text-primary">MarketIcons</h3>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              High-quality BIST company logos for your React and React Native
+              projects.
             </p>
           </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="/docs" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#search" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Icon Search
-                </a>
-              </li>
-            </ul>
-          </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Connect</h4>
-            <ul className="space-y-2">
+          <div className="space-y-4">
+            <h3 className="font-semibold">Resources</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <Link
+                  href="/docs"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Documentation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/search"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Search Icons
+                </Link>
+              </li>
               <li>
                 <a
                   href="https://github.com/codixus/marketicons"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center"
+                  className="hover:text-foreground transition-colors inline-flex items-center gap-2"
                 >
-                  <Github className="h-4 w-4 mr-2" />
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://twitter.com/codixus"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center"
-                >
-                  <Twitter className="h-4 w-4 mr-2" />
-                  Twitter
+                  <span>GitHub</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
-            <ul className="space-y-2">
+          <div className="space-y-4">
+            <h3 className="font-semibold">Legal</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/legal/license"
+                  className="hover:text-foreground transition-colors"
+                >
                   License
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/legal/privacy"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/legal/terms"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Terms of Use
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="font-semibold">Contact</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <a
+                  href="mailto:info@marketicons.com"
+                  className="hover:text-foreground transition-colors"
+                >
+                  info@marketicons.dev
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t text-center text-muted-foreground">
-          <p>© 2024 MarketIcons. Made with ❤️ by Codixus</p>
+        <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
+          <a
+            href="https://codixus.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Made with ❤︎ by Codixus
+          </a>
         </div>
       </div>
     </footer>
-  )
+  );
 }
