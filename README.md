@@ -52,7 +52,7 @@ function App() {
 ## 🗺️ Roadmap
 
 - [x] Borsa Istanbul (BIST) support
-- [x] Crypto markets support
+- [ ] Crypto markets support
 - [ ] NASDAQ support
 - [ ] NYSE support
 - [ ] London Stock Exchange support
