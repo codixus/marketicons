@@ -1,7 +1,8 @@
 import React from "react";
 import { SvgXml } from "react-native-svg";
 import { ViewStyle } from "react-native";
-import icons from "@marketicons/bist";
+import * as icons from "@marketicons/bist";
+import result from "lodash/result";
 
 export interface BistIconProps {
   /**
@@ -27,7 +28,7 @@ export interface BistIconProps {
  * BistIcon component for displaying BIST company logos in React Native applications
  */
 export function BistIcon({ name, size = 24, style, testID }: BistIconProps) {
-  const icon = icons[name];
+  const icon = result(icons, name);
 
   if (!icon) {
     console.warn(`Icon "${name}" not found in @marketicons/bist package`);
@@ -36,7 +37,7 @@ export function BistIcon({ name, size = 24, style, testID }: BistIconProps) {
 
   return (
     <SvgXml
-      xml={icon.content}
+      xml={icon.content!}
       width={size}
       height={size}
       style={style}
